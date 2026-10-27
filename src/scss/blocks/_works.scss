@@ -1,0 +1,220 @@
+@use '../tokens' as *;
+
+.works,
+.upcoming {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: 24px;
+}
+
+.works {
+  margin-top: 48px;
+}
+
+.upcoming {
+  margin-top: 24px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: 28px;
+}
+
+// Скриншоты: десктоп в рамке браузера и телефон поверх
+.work-card__media {
+  position: relative;
+  padding: 28px 28px 0;
+
+  &--okna {
+    background: #e9eff8;
+  }
+
+  &--pion {
+    background: #fbeef1;
+  }
+
+  @include down($bp-sm) {
+    padding: 20px 20px 0;
+  }
+}
+
+.browser {
+  overflow: hidden;
+  background: $white;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 30px rgba($ink, 0.08);
+}
+
+.browser__bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+}
+
+.browser__url {
+  min-width: 0;
+  padding: 3px 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: $ground;
+  font-family: $mono;
+  font-size: 11px;
+  color: $muted;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.browser__shot {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.phone {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  width: clamp(84px, 22%, 118px);
+  overflow: hidden;
+  background: $white;
+  border: 5px solid #1b2433;
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba($ink, 0.22);
+
+  img {
+    width: 100%;
+    aspect-ratio: 300 / 633;
+  }
+
+  @include down($bp-sm) {
+    right: 12px;
+    bottom: 12px;
+    border-width: 4px;
+    border-radius: 16px;
+  }
+}
+
+.work-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 22px;
+  padding: 32px clamp(20px, 3vw, 36px) 36px;
+
+  @include down($bp-sm) {
+    padding-block: 26px 28px;
+  }
+}
+
+.work-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.work-card__num {
+  font-family: $mono;
+  font-size: 13px;
+  color: $muted;
+}
+
+.work-card__title {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.work-card__text {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $muted;
+}
+
+.scores__title {
+  font-family: $mono;
+  font-size: 12px;
+  color: $muted;
+}
+
+.scores__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+
+  @include down($bp-xxs) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.score {
+  padding: 10px;
+  border-radius: 12px;
+  background: $success-soft;
+}
+
+.score__value {
+  display: block;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: $success-ink;
+}
+
+.score__label {
+  display: block;
+  font-size: 12px;
+  color: $success-label;
+}
+
+.work-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+// Работы, которые ещё делаются
+.upcoming__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  padding: 28px clamp(20px, 3vw, 36px);
+  border: 1.5px dashed $line-strong;
+  border-radius: 24px;
+}
+
+.upcoming__body {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.upcoming__title {
+  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.upcoming__text {
+  margin-top: 6px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: $muted;
+}
+
+.upcoming__stack {
+  font-family: $mono;
+  font-size: 13px;
+  color: $muted;
+}

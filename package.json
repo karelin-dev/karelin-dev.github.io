@@ -1,0 +1,22 @@
+{
+  "name": "karelin-dev.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Витрина портфолио Ивана Карелина: работы с демо и кодом, стек, обо мне",
+  "author": "Ivan Karelin",
+  "license": "MIT",
+  "scripts": {
+    "dev": "run-p watch:css serve",
+    "watch:css": "sass --watch --no-source-map src/scss/main.scss docs/css/main.css",
+    "serve": "browser-sync start --server docs --files \"docs/**/*\" --port 3003 --no-open --no-notify --no-ui",
+    "fonts": "node scripts/copy-fonts.mjs",
+    "build": "npm run fonts && sass --no-source-map --style=compressed src/scss/main.scss docs/css/main.css"
+  },
+  "devDependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "browser-sync": "^3.0.4",
+    "npm-run-all2": "^9.0.4",
+    "sass": "^1.93.2"
+  }
+}

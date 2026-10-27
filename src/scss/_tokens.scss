@@ -1,0 +1,53 @@
+// Цвета, шрифты, размеры и брейкпоинты витрины
+
+$brand: #1e3a5f;
+$brand-hover: #16304f;
+$accent: #2563eb;
+$cursor: #6ea0ff;
+
+$ink: #131b2b;
+$text: #2b3445;
+$muted: #566173;
+$line: #e2e7ee;
+$line-strong: #cbd3df;
+$dot: #d5dbe4;
+
+$white: #fff;
+$ground: #f5f7fa;
+$tint: #eef2f8;
+$tint-blue: #eaf0fb;
+
+$success: #16a34a;
+$success-ink: #166534;
+$success-soft: #eff8f2;
+$success-label: #3b5a45;
+$status-bg: #edf7f0;
+$status-ink: #14532d;
+$wip-bg: #fff3e2;
+$wip-ink: #8a4b00;
+
+$code-keyword: #7a4fd6;
+$code-string: #0e7c66;
+$code-number: #c2410c;
+$code-faint: #a3acba;
+
+$font: 'Manrope', 'Manrope Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+$container: 1200px;
+$gutter: clamp(16px, 4vw, 40px);
+$header-h: 76px;
+
+$shadow-card: 0 24px 60px rgba($ink, 0.1);
+$shadow-float: 0 18px 40px rgba($ink, 0.1);
+
+$bp-nav: 860px;
+$bp-sm: 600px;
+$bp-xs: 520px;
+$bp-xxs: 480px;
+
+@mixin down($bp) {
+  @media (max-width: ($bp - 0.02px)) {
+    @content;
+  }
+}

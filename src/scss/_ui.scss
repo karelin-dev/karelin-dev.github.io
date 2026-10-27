@@ -1,0 +1,194 @@
+// Кнопки, метки, списки: общие элементы всех блоков
+@use 'tokens' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 54px;
+  padding: 0 26px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  &--primary {
+    background: $brand;
+    color: $white;
+
+    &:hover {
+      background: $brand-hover;
+      color: $white;
+    }
+  }
+
+  &--outline {
+    border-color: $line-strong;
+    background: transparent;
+    color: $ink;
+
+    &:hover {
+      border-color: $brand;
+      color: $brand;
+    }
+  }
+
+  &--md {
+    gap: 8px;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  &--sm {
+    gap: 8px;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  &--md .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.section {
+  padding-block: 96px;
+
+  &--ground {
+    background: $ground;
+  }
+
+  @include down($bp-sm) {
+    padding-block: 64px;
+  }
+}
+
+.section__label {
+  font-family: $mono;
+  font-size: 13px;
+  font-weight: 500;
+  color: $accent;
+}
+
+.section__title {
+  margin-top: 12px;
+  font-size: clamp(32px, 3.4vw, 44px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 48px;
+}
+
+.section__text {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: $muted;
+}
+
+.tag {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: $tint;
+  font-size: 13px;
+  font-weight: 600;
+  color: $brand;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: $wip-bg;
+  font-family: $mono;
+  font-size: 12px;
+  font-weight: 500;
+  color: $wip-ink;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+
+  span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $dot;
+  }
+
+  &--sm {
+    gap: 6px;
+
+    span {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.checklist {
+  display: grid;
+  gap: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+
+  li {
+    display: flex;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    color: $success;
+    stroke-width: 2.4;
+  }
+}
+
+.code-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  li {
+    padding: 5px 10px;
+    border: 1px solid $line;
+    border-radius: 8px;
+    font-family: $mono;
+    font-size: 13px;
+  }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  li {
+    padding: 5px 11px;
+    border-radius: 8px;
+    background: $ground;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
