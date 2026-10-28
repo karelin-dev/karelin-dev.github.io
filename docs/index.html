@@ -11,7 +11,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://karelin-dev.github.io/">
 <meta property="og:title" content="Иван Карелин: frontend-разработчик">
-<meta property="og:description" content="Портфолио: каталог недвижимости на Nuxt, лендинги с калькулятором, квизом и онлайн-записью. Живые демо и открытый код.">
+<meta property="og:description" content="Портфолио: интернет-магазин на React, каталог недвижимости на Nuxt, лендинги с калькулятором, квизом и онлайн-записью. Живые демо и открытый код.">
 <meta property="og:image" content="https://karelin-dev.github.io/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -94,7 +94,7 @@
         </div>
         <ul class="facts">
           <li class="facts__item"><span class="facts__value">2022</span><span class="facts__label">верстаю с июля 2022 года</span></li>
-          <li class="facts__item"><span class="facts__value">95–99</span><span class="facts__label">Lighthouse mobile у работ ниже</span></li>
+          <li class="facts__item"><span class="facts__value">94–99</span><span class="facts__label">Lighthouse mobile у работ ниже</span></li>
           <li class="facts__item"><span class="facts__value">320 px</span><span class="facts__label">адаптив от самых узких экранов</span></li>
         </ul>
       </div>
@@ -145,6 +145,64 @@
       </div>
 
       <div class="works">
+        <article class="work-card work-card--wide" aria-labelledby="work-polden">
+          <div class="work-card__media work-card__media--polden">
+            <div class="browser">
+              <div class="browser__bar">
+                <span class="dots dots--sm" aria-hidden="true"><span></span><span></span><span></span></span>
+                <span class="browser__url">karelin-dev.github.io/shop-demo</span>
+              </div>
+              <img class="browser__shot" src="img/polden-desktop-1040.webp" srcset="img/polden-desktop-600.webp 600w, img/polden-desktop-1040.webp 1040w" sizes="(min-width: 1200px) 540px, (min-width: 984px) calc(54vw - 110px), calc(100vw - 90px)" width="1040" height="1120" alt="Главная магазина «Полдень»: заголовок «Дом, где хорошо каждое утро», фото сухоцветов в арке и категории" loading="lazy" decoding="async">
+            </div>
+            <div class="phone">
+              <img src="img/polden-mobile-300.webp" width="300" height="633" alt="Мобильная версия магазина «Полдень»" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="work-card__body">
+            <div class="work-card__tags">
+              <span class="work-card__num">01</span>
+              <span class="tag">Интернет-магазин</span>
+              <span class="tag">React</span>
+            </div>
+            <div>
+              <h3 class="work-card__title" id="work-polden">«Полдень»: магазин товаров для дома</h3>
+              <p class="work-card__text">Магазин на React: каталог с фильтрами, страница товара, корзина с промокодом и оформление заказа без оплаты.</p>
+            </div>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Фильтры в адресе страницы, счётчики и подсказка, если ничего не нашлось</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Корзина: бесплатная доставка от 5&nbsp;000&nbsp;₽, промокод, комплект со скидкой</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Оформление с маской телефона и проверкой полей, заказы в браузере</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>40 страниц собраны в HTML заранее и работают без сервера</li>
+            </ul>
+            <ul class="code-tags" aria-label="Стек">
+              <li>React 19</li>
+              <li>React Router 7</li>
+              <li>JavaScript</li>
+              <li>Vite</li>
+              <li>CSS Modules</li>
+            </ul>
+            <div class="scores">
+              <p class="scores__title">Lighthouse, мобильная версия, главная</p>
+              <ul class="scores__list">
+                <li class="score"><span class="score__value">94</span><span class="score__label">Скорость</span></li>
+                <li class="score"><span class="score__value">100</span><span class="score__label">Доступность</span></li>
+                <li class="score"><span class="score__value">100</span><span class="score__label">Практики</span></li>
+                <li class="score"><span class="score__value">100</span><span class="score__label">SEO</span></li>
+              </ul>
+            </div>
+            <div class="work-card__actions">
+              <a class="btn btn--primary btn--md" href="https://karelin-dev.github.io/shop-demo/">
+                Открыть демо<span class="visually-hidden"> «Полдень»</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+              <a class="btn btn--outline btn--md" href="https://github.com/karelin-dev/shop-demo">
+                <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+                Код на GitHub<span class="visually-hidden">: «Полдень»</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
         <article class="work-card work-card--wide" aria-labelledby="work-litera">
           <div class="work-card__media work-card__media--litera">
             <div class="browser">
@@ -160,7 +218,7 @@
           </div>
           <div class="work-card__body">
             <div class="work-card__tags">
-              <span class="work-card__num">01</span>
+              <span class="work-card__num">02</span>
               <span class="tag">Многостраничный сайт</span>
               <span class="tag">Каталог и карта</span>
             </div>
@@ -218,7 +276,7 @@
           </div>
           <div class="work-card__body">
             <div class="work-card__tags">
-              <span class="work-card__num">02</span>
+              <span class="work-card__num">03</span>
               <span class="tag">Лендинг</span>
               <span class="tag">Калькулятор и квиз</span>
             </div>
@@ -276,7 +334,7 @@
           </div>
           <div class="work-card__body">
             <div class="work-card__tags">
-              <span class="work-card__num">03</span>
+              <span class="work-card__num">04</span>
               <span class="tag">Лендинг</span>
               <span class="tag">Онлайн-запись</span>
             </div>
@@ -319,16 +377,6 @@
         </article>
       </div>
 
-      <ul class="upcoming" aria-label="Работы в процессе">
-        <li class="upcoming__card">
-          <div class="upcoming__body">
-            <span class="badge">в работе</span>
-            <h3 class="upcoming__title">Интернет-магазин</h3>
-            <p class="upcoming__text">Каталог, корзина и оформление заказа, простая админка.</p>
-          </div>
-          <span class="upcoming__stack">React · FastAPI</span>
-        </li>
-      </ul>
     </div>
   </section>
 

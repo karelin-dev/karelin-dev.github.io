@@ -1,18 +1,10 @@
 @use '../tokens' as *;
 
-.works,
-.upcoming {
+.works {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
   gap: 24px;
-}
-
-.works {
   margin-top: 48px;
-}
-
-.upcoming {
-  margin-top: 24px;
 }
 
 .work-card {
@@ -39,6 +31,10 @@
 
   &--litera {
     background: #e8efea;
+  }
+
+  &--polden {
+    background: #f6e5de;
   }
 
   @include down($bp-sm) {
@@ -223,40 +219,4 @@
   gap: 10px;
   margin-top: auto;
   padding-top: 4px;
-}
-
-// Работы, которые ещё делаются
-.upcoming__card {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px 24px;
-  padding: 28px clamp(20px, 3vw, 36px);
-  border: 1.5px dashed $line-strong;
-  border-radius: 24px;
-}
-
-.upcoming__body {
-  flex: 1 1 240px;
-  min-width: 0;
-}
-
-.upcoming__title {
-  margin-top: 12px;
-  font-size: 20px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-}
-
-.upcoming__text {
-  margin-top: 6px;
-  font-size: 15px;
-  line-height: 1.55;
-  color: $muted;
-}
-
-.upcoming__stack {
-  font-family: $mono;
-  font-size: 13px;
-  color: $muted;
 }
