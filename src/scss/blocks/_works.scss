@@ -37,6 +37,10 @@
     background: #fbeef1;
   }
 
+  &--litera {
+    background: #e8efea;
+  }
+
   @include down($bp-sm) {
     padding: 20px 20px 0;
   }
@@ -97,6 +101,44 @@
     border-width: 4px;
     border-radius: 16px;
   }
+}
+
+// Главная работа на всю ширину: скриншот слева, описание справа.
+// Скриншот растягивается на высоту описания и обрезается снизу.
+.work-card--wide {
+  @media (min-width: 984px) {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+
+    .work-card__media {
+      display: flex;
+      flex-direction: column;
+      padding: 36px 36px 0;
+    }
+
+    .browser {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+
+    .browser__shot {
+      flex: 1 1 0;
+      min-height: 0;
+      aspect-ratio: auto;
+      object-position: left top;
+    }
+
+    .phone {
+      right: 24px;
+      bottom: 24px;
+    }
+  }
+}
+
+.browser__shot {
+  object-position: top;
 }
 
 .work-card__body {
