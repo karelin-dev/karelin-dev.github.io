@@ -198,6 +198,12 @@
   color: #3e4859;
 }
 
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .footer {
   border-top: 1px solid $line;
 }
