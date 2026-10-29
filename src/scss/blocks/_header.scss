@@ -115,12 +115,33 @@
   }
 }
 
-.nav__item--mobile {
-  display: none;
+.header__social {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
 }
 
-.header__github {
-  margin-left: 8px;
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid $line-strong;
+  border-radius: 12px;
+  background: $white;
+  color: $ink;
+  transition: color 0.2s, border-color 0.2s;
+
+  &:hover {
+    border-color: $accent;
+    color: $accent;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .header__burger {
@@ -142,12 +163,17 @@
 }
 
 @include down($bp-nav) {
-  .header__github {
+  .header__inner {
+    gap: 8px;
+  }
+
+  .header__social {
     margin-left: auto;
   }
 
   .header__burger {
     display: inline-flex;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -192,18 +218,59 @@
       display: none;
     }
   }
+}
 
-  .nav__item--mobile {
-    display: block;
+@include down($bp-xxs) {
+  .header__social {
+    gap: 6px;
+  }
+
+  .icon-btn,
+  .header__burger {
+    width: 40px;
+    height: 40px;
   }
 }
 
-@include down($bp-xs) {
-  .header__github {
-    display: none;
+// Самые узкие телефоны (320 px): логотип и кнопки компактнее, чтобы всё поместилось в строку
+@include down(360px) {
+  .header__inner {
+    gap: 6px;
   }
 
+  .logo {
+    gap: 10px;
+  }
+
+  .logo__mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 13px;
+
+    &::after {
+      right: 6px;
+      bottom: 7px;
+    }
+  }
+
+  .logo__name {
+    font-size: 16px;
+  }
+
+  .header__social {
+    gap: 4px;
+  }
+
+  .icon-btn,
   .header__burger {
-    margin-left: auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .icon-btn .icon {
+    width: 18px;
+    height: 18px;
   }
 }

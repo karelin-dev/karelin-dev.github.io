@@ -111,6 +111,12 @@ a {
   stroke-linejoin: round;
 }
 
+// Логотипы сервисов: залитые, без обводки
+.icon--brand {
+  fill: currentColor;
+  stroke: none;
+}
+
 .sprite {
   position: absolute;
   width: 0;
