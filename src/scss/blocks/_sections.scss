@@ -183,6 +183,7 @@
 }
 
 .cta__title {
+  margin-top: 12px;
   font-size: clamp(28px, 3vw, 40px);
   font-weight: 800;
   line-height: 1.15;
@@ -202,6 +203,18 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 28px;
+}
+
+.cta__list {
+  flex: 0 1 400px;
+  gap: 14px;
+  padding: 24px 26px;
+  border: 1px solid $line;
+  border-radius: 20px;
+  background: $white;
+  font-size: 16px;
+  color: $text;
 }
 
 .footer {
